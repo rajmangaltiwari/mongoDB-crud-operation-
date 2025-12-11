@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body data-tailwind-scan>
+    <div class="w-full h-screen bg-zinc-900 p-10 text-white">
+        <h1 class="inline-block text-3xl mb-5">Update User</h1>
+        <form action="/update/<%= userFind._id %>" method="post">
+            <input class="p-2 bg-zinc-700 mr-3" type="text" name="name" placeholder="Enter your name" value="<%= userFind.name %>" >
+            <input class="p-2 bg-zinc-700 mr-3" type="email" name="email" placeholder="Enter your email" value="<%= userFind.email %>" >
+            <input class="p-2 bg-zinc-700 mr-3" type="text" name="image" placeholder="Enter image URL" value="<%= userFind.image %>">
+            <input class="py-2 px-5 rounded bg-yellow-500 text-black mr-3" type="submit" value="Update">
+    </div>
+</body>
+</html>
